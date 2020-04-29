@@ -19,12 +19,17 @@ public class DungeonsDragons {
 			System.out.println("Début du programme.");
 			System.out.println("Souhaitez-vous créer un guerrier ou un sorcier ?");
 			System.out.println("Veuillez taper G pour Guerrier ou S pour Sorcier. Q pour quitter.");
+			System.out.println("Vous pouvez également (M)odifier des personnages existants ci-dessus.");
 			String cmd = scanner.nextLine();
 			// Fin du programme par l'user. //
 			if (cmd.equals("Q")) {
 				scanner.close();
 				System.out.println("Fin du programme. Merci pour votre participation.");
 				break;
+			}
+			// Modification d'un personnage. //
+			if (cmd.equals("M")) {
+				// TODO
 			}
 			// Sélection incorrecte. //
 			if (!cmd.equals("G") && !cmd.equals("S")) {
