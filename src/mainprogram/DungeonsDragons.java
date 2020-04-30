@@ -30,6 +30,7 @@ public class DungeonsDragons {
 			// Modification d'un personnage. //
 			if (cmd.equals("M")) {
 				// TODO
+				ModifPerso.modifPerso(warriors, wizards, scanner);
 			}
 			// Sélection incorrecte. //
 			if (!cmd.equals("G") && !cmd.equals("S")) {
@@ -57,6 +58,9 @@ public class DungeonsDragons {
 			}
 			// Si le choix du nom est bien une chaîne de caractères. //
 			if (name_selection.equals("")) {
+				if (cmd.equals("G") || cmd.equals("S") || (!name_selection.equals("") && (life_selection == 0 || attack_power_selection == 0))) {
+					CreationPerso.creationPerso;
+				}
 				// "G" pour Guerrier. //
 				if (cmd.equals("G")) {
 					Warrior warrior = new Warrior();
@@ -98,7 +102,7 @@ public class DungeonsDragons {
 						++wizards_number;
 					}
 				} catch (Exception IllegalArgumentException) {
-					System.out.println("Argument de vie ou d'attaque invalide.");
+					System.out.println("Paramètre de vie ou d'attaque invalide.");
 					if (cmd.equals("G")) {
 						Warrior warrior = new Warrior(name_selection);
 						System.out.println("Création du personnage " + warrior.Name);
