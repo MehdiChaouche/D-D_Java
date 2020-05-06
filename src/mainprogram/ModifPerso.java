@@ -6,8 +6,8 @@ import java.util.Scanner;
 import chars.Warrior;
 import chars.Wizard;
 
-public abstract class ModifPerso {
-	public static void modifPerso (ArrayList<Warrior> warriors, ArrayList<Wizard> wizards, Scanner scanner){
+public class ModifPerso {
+	public void modifPerso (ArrayList<Personnage> listePersonnages, Scanner scanner){
 		int resultat_index;
 		int[] resultat_tableau = new int[2];
 		while (true) {

@@ -6,8 +6,13 @@ import chars.*;
 
 public class DungeonsDragons {
 	public static void main(String [] args) {
-		ArrayList<Warrior> warriors = new ArrayList<Warrior>();
-		ArrayList<Wizard> wizards = new ArrayList<Wizard>();
+		ArrayList<Character> listePersonnages;
+		ArrayList<Character> listePersonnages = new ArrayList<Character>();
+		
+		public ArrayList<Character> getListePersonnages() {
+			return listePersonnages;
+		}
+		
 		/* -- Initialisation des compteurs & variables -- */
 		int warriors_number = 0;
 		int wizards_number = 0;
@@ -30,7 +35,7 @@ public class DungeonsDragons {
 			// Modification d'un personnage. //
 			if (cmd.equals("M")) {
 				// TODO
-				ModifPerso.modifPerso(warriors, wizards, scanner);
+				ModifPerso.modifPerso(listePersonnages, scanner);
 			}
 			// Sélection incorrecte. //
 			if (!cmd.equals("G") && !cmd.equals("S")) {

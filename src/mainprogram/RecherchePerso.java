@@ -11,7 +11,7 @@ abstract class RecherchePerso {
 	private static final int SORCIER = 1;
 	private static final int RIEN = 0;
 
-	public static void recherche(ArrayList<Warrior> warriors, ArrayList<Wizard> wizards, Scanner scanner) {
+	public void recherche(ArrayList<Warrior> warriors, ArrayList<Wizard> wizards, Scanner scanner) {
 		int[] resultat_tableau = new int[2];
 		System.out.println("Le nom du personnage à modifier ?");
 		System.out.println("|||");
@@ -23,7 +23,7 @@ abstract class RecherchePerso {
 			return;
 		}
 		
-		resultat_tableau = RecherchePerso.recherchePerso(wizards, warriors, cmd);
+		resultat_tableau = recherchePerso(wizards, warriors, cmd);
 		
 		if (resultat_tableau[0] == GUERRIER) {
 			System.out.println(warriors.get(resultat_tableau[1]).toString());
@@ -32,7 +32,7 @@ abstract class RecherchePerso {
 		}
 	}
 
-	private static int[] recherchePerso(ArrayList<Wizard> wizards, ArrayList<Warrior> warriors, String cmd) {
+	static int[] recherchePerso(ArrayList<Wizard> wizards, ArrayList<Warrior> warriors, String cmd) {
 		// Réinitialise le tableau de résultats.
 		int[] resultat_tableau = new int[2];
 		
